@@ -11,12 +11,23 @@ export class CourseCardComponent {
   @Input()
   course:Course;
 
+  @Input()
+  cardIndex:number;
+
   @Output()
   courseSelected = new EventEmitter<Course>();
 
   onCourseViewClick(){
     console.log("course view button click");
     this.courseSelected.emit(this.course);
+  }
+
+  isImageExists(){
+    return this.course && this.course.iconUrl;
+  }
+
+  cardClasses(){
+    return {"beginner":this.course.category == "BEGINNER"}
   }
 
 }
