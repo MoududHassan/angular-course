@@ -5,6 +5,9 @@
 
 </div>
 
+<div>Start Date: {{startDate | date:'MMM/dd/yy'}}</div>
+<div>Price: {{price |  currency:'EUR'}}</div>
+
 
 <!-- <div class="courses">
 
@@ -17,9 +20,16 @@
     (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i+1"></course-card>
 </div> -->
 
-<div class="courses">
-    <course-card *ngFor="let course of courses; index as i"
+<!-- <div class="courses">
+    <course-card *ngFor="let course of courses | slice:0:5; index as i"
     (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i+1"></course-card>
+</div> -->
+
+<div class="courses" #container>
+    <course-card #cardRef1 (courseSelected)="onCourseSelected($event)" [course]="courses[1]">
+        <div #testContent>Test</div>
+    </course-card>
+    <course-card #cardRef2 (courseSelected)="onCourseSelected($event)" [course]="courses[2]"></course-card>
 </div>
 
 
