@@ -22,10 +22,6 @@ export class CourseCardComponent {
     this.courseSelected.emit(this.course);
   }
 
-  isImageExists(){
-    return this.course && this.course.iconUrl;
-  }
-
   cardClasses(){
     return {"beginner":this.course.category == "BEGINNER"}
   }

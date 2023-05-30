@@ -3,14 +3,13 @@
     <div class="course-title">
         {{cardIndex || '' +" "+course.description}}
     </div>
-    <img width="300" alt="Angular Logo" *ngIf="isImageExists(); else noImage"
-         src="{{course.iconUrl}}">
+    
+    <ng-content select="[courseimage]" course="[course]">
 
-    <ng-template #noImage>
-        <p>No image Available</p>
-    </ng-template>
+    </ng-content>
+    <!-- <ng-content [course]="course"></ng-content> -->
+   <!-- <course-image [course]="course" /> -->
 
-    <ng-content></ng-content>
 
     <div class="course-description">
         {{course.longDescription}}
