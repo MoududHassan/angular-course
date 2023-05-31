@@ -1,9 +1,5 @@
 
 <div class="course-image">
-    <img width="300" alt="Angular Logo" *ngIf="isImageExists(); else noImage"
-         src="{{course.iconUrl}}">
-
-         <ng-template #noImage>
-            <p>No image Available</p>
-        </ng-template>
+    <img width="300" alt="Angular Logo"
+         [src]="imageUrl">
 </div>

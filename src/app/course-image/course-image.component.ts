@@ -8,10 +8,6 @@ import { Course } from '../model/course';
 })
 export class CourseImageComponent {
 
-  @Input()
-  course:Course;
-
-  isImageExists(){
-    return this.course && this.course.iconUrl;
-  }
+  @Input('src')
+  imageUrl:string;
 }

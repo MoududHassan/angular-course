@@ -9,7 +9,7 @@
 <div>Price: {{price |  currency:'EUR'}}</div>
 
 
-<!-- <div class="courses">
+<!-- <div class="courses" #container>
 
     <course-card 
     *ngFor="let course of courses; index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd"
@@ -17,7 +17,9 @@
     [class.is-last]="isLast"
     [class.is-even]="isEven"
     [class.is-odd]="isOdd"
-    (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i+1"></course-card>
+    (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i+1">
+    <course-image [src]="course.iconUrl"></course-image>
+</course-card>
 </div> -->
 
 <!-- <div class="courses">
@@ -25,12 +27,20 @@
     (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i+1"></course-card>
 </div> -->
 
-<div class="courses" #container>
+<!-- <div class="courses" #container>
     <course-card #cardRef1 (courseSelected)="onCourseSelected($event)" [course]="courses[1]">
         <div #testContent>Test</div>
-        <course-image courseimage></course-image>
+        <course-image [src]="courses[1].iconUrl"></course-image>
     </course-card>
     <course-card #cardRef2 (courseSelected)="onCourseSelected($event)" [course]="courses[2]"></course-card>
+</div> -->
+
+<div class="courses" #container>
+    <course-card 
+    *ngFor="let course of courses; index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd"
+    (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i+1">
+        <course-image [src]="course.iconUrl"></course-image>
+    </course-card>
 </div>
 
 

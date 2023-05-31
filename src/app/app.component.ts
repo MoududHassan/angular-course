@@ -17,11 +17,11 @@ export class AppComponent {
   // @ViewChild(CourseCardComponent)
   // card:CourseCardComponent
 
-  @ViewChild('cardRef1')
-  card1:CourseCardComponent;
+  // @ViewChild('cardRef1')
+  // card1:CourseCardComponent;
 
-  @ViewChild('cardRef2')
-  card2:CourseCardComponent;
+  // @ViewChild('cardRef2')
+  // card2:CourseCardComponent;
 
 
 
@@ -30,18 +30,18 @@ export class AppComponent {
   //   console.log("course card click, ", this.card2);
   // }
 
-  // onCourseSelected(course:Course){
-  //   console.log("course card click, ", course);
-  // }
-
-  @ViewChild('container')
-  containerDiv:ElementRef;
-
-  @ViewChild('testContent')
-  testConyentDiv:ElementRef;
-
   onCourseSelected(course:Course){
-    console.log("course container, ", this.testConyentDiv);
+    console.log("course card click, ", course);
   }
+
+  // @ViewChild('container')
+  // containerDiv:ElementRef;
+
+  // @ViewChild('testContent')
+  // testConyentDiv:ElementRef;
+
+  // onCourseSelected(course:Course){
+  //   console.log("course container, ", this.testConyentDiv);
+  // }
 
 }
