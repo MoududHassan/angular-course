@@ -10,10 +10,6 @@
     </ng-template>
     
     <ng-content select="course-image" *ngIf="course.iconUrl; else blankImage"></ng-content>
-    <!-- <ng-content [course]="course"></ng-content> -->
-   <!-- <course-image [course]="course" /> -->
-
-
     <div class="course-description">
         {{course.longDescription}}
     </div>

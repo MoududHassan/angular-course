@@ -8,14 +8,15 @@ import { Course } from '../model/course';
 })
 export class CourseCardComponent {
 
-  @Input()
-  course:Course;
+  @Input() course:Course;
 
-  @Input()
-  cardIndex:number;
+  @Input() cardIndex:number;
 
-  @Output()
-  courseSelected = new EventEmitter<Course>();
+  @Output() courseSelected = new EventEmitter<Course>();
+  
+  constructor(){
+    console.log(this.course);
+  }
 
   onCourseViewClick(){
     console.log("course view button click");

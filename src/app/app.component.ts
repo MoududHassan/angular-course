@@ -1,8 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import {COURSES} from '../db-data';
 import { Course } from './model/course';
-import { CourseCardComponent } from './course-card/course-card.component';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -29,6 +27,10 @@ export class AppComponent {
   //   console.log("course card click, ", this.card1);
   //   console.log("course card click, ", this.card2);
   // }
+
+  constructor(){
+    console.log("course card click, ", this.courses);
+  }
 
   onCourseSelected(course:Course){
     console.log("course card click, ", course);
